@@ -3,10 +3,10 @@ import json
 import numpy as np
 from collections import deque
 
+num_std_dev = 1 
+window_size = 20  
 region_name = 'us-east-1'
 stream_name = 'kinesis-Tercer-Parcial'
-window_size = 20  
-num_std_dev = 1 
 
 kinesis = boto3.client('kinesis', region_name=region_name)
 
