@@ -4,9 +4,9 @@ import numpy as np
 from collections import deque
 
 region_name = 'us-east-1'
-stream_name = 'parcial3'
-window_size = 20  # Tamaño de la ventana
-num_std_dev = 1  # Número de desviaciones estándar
+stream_name = 'kinesis-Tercer-Parcial'
+window_size = 20  
+num_std_dev = 1 
 
 kinesis = boto3.client('kinesis', region_name=region_name)
 
@@ -42,7 +42,6 @@ def consume_bollinger():
 
 def check_bollinger(price_window, price, stock):
     if len(price_window) == window_size:
-        # Calculo de la franja inferior
         prices = np.array(price_window)
         sma = np.mean(prices)
         std = np.std(prices)
@@ -51,6 +50,5 @@ def check_bollinger(price_window, price, stock):
                     print(f'ALERTA: Precio de acción {stock} está por debajo de la franja inferior de Bollinger (${round(bollinger_lower,2)} USD) con ${price}')
     return None
 
-# Ejecución del consumidor
 if __name__ == '__main__':
     consume_bollinger()
