@@ -47,7 +47,7 @@ def check_bollinger(price_window, price, stock):
         std = np.std(prices)
         bollinger_lower = sma - num_std_dev * std
         if price < bollinger_lower:
-                    print(f'ALERTA: Precio de acción {stock} está por debajo de la franja inferior de Bollinger (${round(bollinger_lower,2)} USD) con ${price}')
+                    print(f'!!! ATENCION !!! {stock} esta por debajo la franja inferior (${round(bollinger_upper,2)} USD) con ${price}')
     return None
 
 if __name__ == '__main__':
