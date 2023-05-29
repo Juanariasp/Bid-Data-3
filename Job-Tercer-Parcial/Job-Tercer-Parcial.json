@@ -1,5 +1,5 @@
 {
-  "name" : "Job_Tercer_Parcial",
+  "name" : "Job-Tercer-Parcial",
   "description" : "",
   "role" : "arn:aws:iam::673168509045:role/LabRole",
   "executionProperty" : {
@@ -7,7 +7,7 @@
   },
   "command" : {
     "name" : "glueetl",
-    "scriptLocation" : "s3://aws-glue-assets-673168509045-us-east-1/scripts/Job_Tercer_Parcial.py",
+    "scriptLocation" : "s3://aws-glue-assets-673168509045-us-east-1/scripts/Job-Tercer-Parcial.py",
     "pythonVersion" : "3"
   },
   "defaultArguments" : {
@@ -31,6 +31,6 @@
     "provider" : "GITHUB",
     "repository" : "Bid-Data-3",
     "branch" : "main",
-    "folder" : "Job_Tercer_Parcial"
+    "folder" : "Job-Tercer-Parcial"
   }
 }
